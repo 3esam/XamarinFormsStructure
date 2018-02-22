@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStarter.CustomControls.LoaderControl"
+             IsVisible="{Binding PageIsBusy}">
+
+    <Grid.GestureRecognizers>
+        <TapGestureRecognizer /> <!-- This is to avoid event propagation -->
+    </Grid.GestureRecognizers>
+
+    <Frame x:Name="LoaderLayout" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="5" BackgroundColor="Black" Opacity="0.9" Padding="10">
+        <StackLayout >
+            <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" Color="Gray" IsRunning="{Binding PageIsBusy}"/>
+            <Label Text="{Binding PageIsBusyMessage}" TextColor="Gray"/>
+        </StackLayout>
+    </Frame>
+    
+</Grid>
