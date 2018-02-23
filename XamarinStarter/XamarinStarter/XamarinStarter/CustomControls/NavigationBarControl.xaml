@@ -17,12 +17,8 @@
         </OnPlatform>
     </ContentView.Padding>
 
-    <ContentView.BackgroundColor>
-        Black
-    </ContentView.BackgroundColor>
-
-    <Grid VerticalOptions="Start" HeightRequest="40">
-        <Button Command="{Binding BackButtonCommand}" Text="Back" FontSize="8" TextColor="Black" HeightRequest="30" WidthRequest="45" HorizontalOptions="Start" VerticalOptions="Center"/>
+    <Grid VerticalOptions="Start" HeightRequest="40" BackgroundColor="Black">
+        <Button Command="{Binding BackButtonCommand}" Text="Back" FontSize="8" TextColor="Black" BackgroundColor="Gray" HeightRequest="30" WidthRequest="45" HorizontalOptions="Start" VerticalOptions="Center"/>
         <Label Text="{Binding Title}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center"/>
     </Grid>
     
